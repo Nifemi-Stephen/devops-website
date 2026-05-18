@@ -1,0 +1,2 @@
+key_name     = "your keyname for your ec2 instance key_value pair"
+docker_image = "ashaolu/devops-portfolio:latest"
