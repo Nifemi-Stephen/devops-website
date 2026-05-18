@@ -4,7 +4,9 @@
 *.tfstate.backup
 .terraform.lock.hcl
 .terraform.tfvars
+terrafrom.tfvars
 *.tfvars
+
 #aws
 .aws/
 
