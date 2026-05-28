@@ -3,11 +3,10 @@ kind: Service
 metadata:
   name: devops-service
 spec:
-  type: LoadBalancer
+  type: ClusterIP
   selector:
     app: devops-portfolio
   ports:
     - protocol: TCP
       port: 80
       targetPort: 80
-      nodePort: 30007

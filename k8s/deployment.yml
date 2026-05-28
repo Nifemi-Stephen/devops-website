@@ -15,7 +15,7 @@ spec:
       containers:
         - name: devops-portfolio
           image: ashaolu/devops-portfolio:latest
-          imagePullPolicy: Always
+          imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 80
 

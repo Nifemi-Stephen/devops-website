@@ -1,8 +1,4 @@
-#This dockerfile was intentionally built with the multi-stage dockerfile
-#-method for the sole purpose of showing devOps depth
-#it is not totally required as there is nothing to build (no bundling or compilation)
 
-# Stage 1: Build stage (simulated for static site)
 FROM alpine:latest AS builder
 
 
@@ -25,7 +21,6 @@ RUN rm -rf /usr/share/nginx/html/*
 
 
 # This is to Copy only needed files from builder stage
-#Builder her is the alias created in the build stage
 COPY --from=builder /app /usr/share/nginx/html
 
 
