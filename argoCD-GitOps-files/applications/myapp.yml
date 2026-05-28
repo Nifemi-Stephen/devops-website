@@ -11,7 +11,7 @@ spec:
   source:
     repoURL: https://github.com/Nifemi-Stephen/devops-website.git
     targetRevision: HEAD
-    path: helm/devops-portfolio
+    path: helm
 
   destination:
     server: https://kubernetes.default.svc
