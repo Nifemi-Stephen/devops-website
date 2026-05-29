@@ -2,20 +2,20 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 
 metadata:
-  name: devops-portfolio
+  name: application
   namespace: argocd
 
 spec:
   project: default
 
   source:
-    repoURL: https://github.com/Nifemi-Stephen/devops-website.git
-    targetRevision: HEAD
-    path: helm
+    repoURL: https://github.com/Nifemi-Stephen/devops-website.git/argoCD-GitOps-files
+    targetRevision: main
+    path: application
 
   destination:
     server: https://kubernetes.default.svc
-    namespace: devops-eks
+    namespace: default
 
   syncPolicy:
     automated:

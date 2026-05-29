@@ -9,9 +9,7 @@ resource "helm_release" "argocd" {
   namespace        = "argocd"
   create_namespace = true
 
-  values = [
-    file("${path.module}/argocd-values.yaml")
-  ]
+  timeout = 600
 
   depends_on = [
     module.eks

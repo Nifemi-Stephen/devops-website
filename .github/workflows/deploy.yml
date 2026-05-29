@@ -4,12 +4,14 @@ on:
   push:
     branches:
       - main
+    paths:
+      - "app-and-dockerfile"
 
 permissions:
   contents: write
 
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
 
     steps:
