@@ -80,6 +80,10 @@ The entire AWS architecture, comprising the VPC, subnets, EKS cluster, node grou
 │ Dashboards    │ │ Logs          │
 └───────────────┘ └───────────────┘
 ```
+<p align="center">
+  <img src="img-docs/app-infra-architecture.png" alt="Architecture Diagram" width="100%">
+</p>
+
 ```text
 ═══════════════════════════════════
  Terraform Provisioned:
@@ -90,10 +94,6 @@ The entire AWS architecture, comprising the VPC, subnets, EKS cluster, node grou
  • Node Groups
 ═══════════════════════════════════
 ```
-<p align="center">
-  <img src="img-docs/app-infra-architecture.png" alt="Architecture Diagram" width="100%">
-</p>
-
 ## 🔧 Tech Stack:
 ```text
 • Terraform
@@ -165,8 +165,7 @@ Install:
 
 Configure AWS credentials:
 
-```
-bash
+```bash
 aws configure
 #input your aws access key ID, aws secret access key, default region and default output format
 ```
@@ -194,8 +193,7 @@ git push origin main
 
 ## Step 2: Deploy Infrastructure
 
-```
-bash
+```bash
 cd terraform-eks-cluster-files
 #update remote backend.tf(optional)
 #if remote backend do not want to be configured
@@ -206,18 +204,18 @@ cd terraform-eks-cluster-files
 #update the terraform.tfvars.example file accordingly, instructions in the file
 #now you can run the commands below
 
-```text
+#text
 #argo cd has been bootstrapped with the eks terraform file
 #the data "aws_eks_cluster" "eks" {
-  name = module.eks.cluster_name
-}
+#  name = module.eks.cluster_name
+#}
 
-data "aws_eks_cluster_auth" "eks" {
-  name = module.eks.cluster_name
-}providers #in the providers.tf
-needs to be commented out before runnung terraform apply so the infrastructure can be created first
-and uncommented so terraform apply is ran again to install argo CD on the cluster
-```
+#data "aws_eks_cluster_auth" "eks" {
+#  name = module.eks.cluster_name
+#}providers #in the providers.tf
+#needs to be commented out before runnung terraform apply so the infrastructure can be created first
+#and uncommented so terraform apply is ran again to install argo CD on the cluster
+
 terraform init
 
 terraform plan
@@ -226,6 +224,7 @@ terraform apply
 ```
 
 ---
+
 
 ## Step 3: Configure kubectl
 
