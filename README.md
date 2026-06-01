@@ -32,6 +32,7 @@ Seamless multi-region replication and easy tear-down of resources
 Infrastructure and Application Architecture
 ![alt text](98B5A511-C62F-4496-8140-E19631993560.PNG)
 
+```text
 ┌─────────────────────────────┐
 │        Developer            │
 └─────────────┬───────────────┘
@@ -93,7 +94,7 @@ Infrastructure and Application Architecture
 │ Grafana       │ │ Loki          │
 │ Dashboards    │ │ Logs          │
 └───────────────┘ └───────────────┘
-
+```
 ═══════════════════════════════════
  Terraform Provisioned:
  • VPC
