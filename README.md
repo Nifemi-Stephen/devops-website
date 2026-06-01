@@ -95,6 +95,7 @@ Infrastructure and Application Architecture
 │ Dashboards    │ │ Logs          │
 └───────────────┘ └───────────────┘
 ```
+```text
 ═══════════════════════════════════
  Terraform Provisioned:
  • VPC
